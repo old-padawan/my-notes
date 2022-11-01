@@ -36,12 +36,12 @@
 */
 
 
-/* ШУКАЄМО СЛОВО В ПРОПОЗИЦІЇ */
+/* ШУКАЄМО СЛОВО */
 const sentence1 = 'The dog chased the cat';
 const result1 = /the/.test(sentence1);
 console.log(result1); // true
 
-/* ШУКАЄМО СЛОВА В ПРОПОЗИЦІЇ (ОПЕРАТОР АБО) */
+/* ШУКАЄМО СЛОВА (ОПЕРАТОР АБО) */
 const sentence2 = "James has a pet cat.";
 const result2 = /dog|cat|bird|fish/.test(sentence2);
 console.log(result2); // true
@@ -51,7 +51,7 @@ const sentence3 = "freeCodeCamp";
 const result3 = /freecodecamp/i.test(sentence3); // прапорець незалежності регістру
 console.log(result3); // true
 
-/* ШУКАЄМО СЛОВO (СЛОВА) І ВИНЯТАЄМО РЕЗУЛЬТАТ З РЯДКУ */
+/* ШУКАЄМО СЛОВO (СЛОВА) І ДІЙСТАЄМО РЕЗУЛЬТАТ З РЯДКУ */
 const sentence4 = "Extract the word 'coding' з цього string.";
 const result4 = sentence4.match(/coding/); //якщо кілька однакових слів, без урахування регістру, додаємо прапори gi
 console.log(result4);
@@ -62,54 +62,54 @@ const regex5 = /.un/g; // Глобальний прапорець
 const result5 = regex5.test(sentence5);
 console.log(result5); // true
 
-/* ВИНЯТАЄМО ВСІ ГОЛОСНІ ІЗ ПРОПОЗИЦІЇ */
+/* ДІЙСТАЄМО ВСІ ГОЛОСНІ ІЗ ПРОПОЗИЦІЇ */
 const sentence6 = "Beware of bugs in the above code; I тільки надана it correct, not tried it.";
 const regex6 = /[aeuio]/gi;
 const result6 = sentence6.match(regex6);
 console.log(result6);
 
 
-/* ВИНЯТАЄМО ЛІТЕРИ В ДІАПОЗОНІ ВІД І ДО */
+/* ДІЙСТАЄМО ЛІТЕРИ В ДІАПОЗОНІ ВІД та ДО */
 const sentence7 = "The quick brown fox jumps over the lazy dog.";
 const regex7 = /[a-z]/gi;
 const result7 = sentence7.match(regex7);
 console.log(result7);
 
 
-/* ВИНЯТАЄМО ЛІТЕРИ І ЦИФРИ В ДІАПОЗОНІ ВІД І ДО */
+/* ВИНЯТАЄМО ЛІТЕРИ І ЦИФРИ В ДІАПОЗОНІ ВІД та ДО */
 const sentence8 = "Blueberry 3.141592653s are delicious.";
 const regex8 = /[h-s2-6]/ig;
 const result8 = sentence8.match(regex8);
 console.log(result8);
 
-/* РЯДКИ УТРИМУЄ ТІЛЬКИ УНІКАЛЬНІ СИМВОЛИ */
+/* РЯДКИ МІСТЯТЬ ТІЛЬКИ УНІКАЛЬНІ СИМВОЛИ */
 function hasUniqueChars(str) {
   return !/(.).*\1/.test(str);
 }
 
 
-/* ВИКЛЮЧАЄМО ЦИФРИ І ГОЛОСНІ, ВИНЯТАЄМО ІНШЕ */
+/* ВИКЛЮЧАЄМО ЦИФРИ І ГОЛОСНІ, ДІЙСТАЄМО ІНШЕ */
 const sentence9 = "3 blind mice.";
 const regex9 = /[^aeiuo^0-9]/gi;
 const result9 = sentence9.match(regex9);
 console.log(result9);
 
 
-/* ВИНЯТАЄМО БУКВУ АБО ЇЇ ПОВТОРИ */
+/* ДІЙСТАЄМО БУКВУ АБО ЇЇ ПОВТОРИ */
 const sentence10 = "Mississippi";
 const regex10 = / s + / gi;
 const result10 = sentence10.match(regex10);
 console.log(result10);
 
 
-/* ВИНЯТАЄМО БУКВУ АБО ЇЇ ПОВТОРИ */
+/* ДІЙСТАЄМО БУКВУ АБО ЇЇ ПОВТОРИ */
 const sentence11 = "Aaaaaaaaaaaaaaaarrrgh!";
 const regex11 = /Aa * /;
 const result11 = sentence11.match(regex11);
 console.log(result11);
 
 
-/* ВИНЯТО ТЕГ HTML */
+/* ДІЙСТАЄМО ТЕГ HTML */
 const sentence12 = "<h1>Winter is coming</h1>";
 const regex12 = /<.*?>/; // Змініть цей рядок
 const result12 = sentence12.match(regex12);
