@@ -62,7 +62,7 @@ const regex5 = /.un/g; // Глобальний прапорець
 const result5 = regex5.test(sentence5);
 console.log(result5); // true
 
-/* ДІЙСТАЄМО ВСІ ГОЛОСНІ ІЗ ПРОПОЗИЦІЇ */
+/* ДІЙСТАЄМО ВСІ ГОЛОСНІ З РЯДКУ */
 const sentence6 = "Beware of bugs in the above code; I тільки надана it correct, not tried it.";
 const regex6 = /[aeuio]/gi;
 const result6 = sentence6.match(regex6);
